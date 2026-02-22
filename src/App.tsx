@@ -68,7 +68,7 @@ function App() {
                 Funds begin moving. Not slowly. Within hours of the first confirmed break, automated systems will begin draining <span className="font-semibold text-[#FFFFFF]">every exposed wallet on every major network simultaneously.</span>
               </p>
               <p>
-                The only defense is a pre-emptive migration to post-quantum cryptographic signatures. The math for this exists — NIST finalized standards in 2024. The problem is deploying it. And deployment requires something most blockchain networks don't have: an absolute mechanism to force a coordinated, mandatory upgrade without permanently splitting the chain.
+                The only defense is a pre-emptive migration to post-quantum cryptographic signatures. The math for this exists — NIST finalized standards in 2024<sup className="text-[#888888] text-[0.6em] ml-1">[1]</sup>. The problem is deploying it. And deployment requires something most blockchain networks don't have: an absolute mechanism to force a coordinated, mandatory upgrade without permanently splitting the chain.
               </p>
             </div>
           </div>
@@ -81,7 +81,7 @@ function App() {
               4 YEARS
             </div>
             <div className="font-mono text-[16px] md:text-[20px] text-[#FF3333] uppercase tracking-[0.2em] font-bold max-w-[800px]">
-              Time Bitcoin took to deploy Taproot — a relatively minor protocol upgrade.
+              Time Bitcoin took to deploy Taproot — a relatively minor protocol upgrade.<sup className="text-[#888888] text-[0.6em] ml-1">[3]</sup>
             </div>
           </div>
         </section>
@@ -97,26 +97,26 @@ function App() {
             <div className="lg:col-span-9">
               <div className="font-sans font-light text-[20px] md:text-[24px] text-[#D0D0D0] leading-[1.6] mb-16 max-w-[800px]">
                 <p>
-                  Post-quantum signatures are not a simple swap. An ML-DSA signature is 2,420 bytes — <span className="font-semibold text-[#FFFFFF]">38 times larger</span> than the 64-byte ECDSA signatures securing current networks.
+                  Post-quantum signatures are not a simple swap. An ML-DSA signature is 2,420 bytes — <span className="font-semibold text-[#FFFFFF]">38 times larger</span> than the 64-byte ECDSA signatures securing current networks.<sup className="text-[#888888] text-[0.6em] ml-1">[2]</sup>
                 </p>
               </div>
 
               {/* THE CHUNKY PROPORTION VISUAL */}
               <div className="flex flex-col md:flex-row items-start md:items-end gap-16 mb-12">
-                {/* Small block (64 bytes). 16x16 */}
+                {/* Small block (64 bytes). 24x24 */}
                 <div className="flex flex-col items-center gap-4">
-                  <div className="w-[16px] h-[16px] bg-[#FFFFFF] shadow-[0_0_10px_rgba(255,255,255,0.5)]"></div>
+                  <div className="w-[24px] h-[24px] bg-[#FFFFFF] shadow-[0_0_15px_rgba(255,255,255,0.6)]"></div>
                   <div className="font-mono text-[12px] text-[#888888] text-center">
                     <span className="text-[#FFFFFF] font-bold block mb-1">1×</span>
                     ECDSA<br />64 bytes
                   </div>
                 </div>
 
-                {/* Large block (2420 bytes). 38x area: sqrt(256 * 38) = sqrt(9728) = ~98.6px */}
+                {/* Large block (2420 bytes). 38x area: sqrt(24*24 * 38) = sqrt(21888) = ~148px */}
                 <div className="flex flex-col items-center gap-4">
-                  <div className="w-[100px] h-[100px] bg-[#222222] border-2 border-[#FF3333] shadow-[0_0_30px_rgba(255,51,51,0.2)] relative overflow-hidden flex items-center justify-center">
-                    <div className="absolute inset-0 opacity-20 bg-[repeating-linear-gradient(45deg,transparent,transparent_2px,#FF3333_2px,#FF3333_4px)]"></div>
-                    <span className="relative z-10 font-mono text-[#FFFFFF] text-[10px] font-bold tracking-widest opacity-50">BLOAT</span>
+                  <div className="w-[148px] h-[148px] bg-[#220000] border-2 border-[#FF3333] shadow-[0_0_40px_rgba(255,51,51,0.4)] relative overflow-hidden flex items-center justify-center">
+                    <div className="absolute inset-0 opacity-30 bg-[repeating-linear-gradient(45deg,transparent,transparent_4px,#FF3333_4px,#FF3333_8px)]"></div>
+                    <span className="relative z-10 font-mono text-[#FF3333] text-[28px] font-black tracking-widest drop-shadow-[0_2px_10px_rgba(0,0,0,1)]">BLOAT</span>
                   </div>
                   <div className="font-mono text-[12px] text-[#888888] text-center">
                     <span className="text-[#FF3333] font-bold block mb-1">38× AREA</span>
@@ -139,7 +139,7 @@ function App() {
               $380B
             </div>
             <div className="font-mono text-[16px] md:text-[20px] text-[#FF3333] uppercase tracking-[0.2em] font-bold max-w-[800px]">
-              Value currently sitting completely exposed in Bitcoin P2PK/P2PKH addresses.
+              Value currently sitting completely exposed in Bitcoin P2PK/P2PKH addresses.<sup className="text-[#888888] text-[0.6em] ml-1">[4]</sup>
             </div>
           </div>
         </section>
@@ -170,7 +170,7 @@ function App() {
                 </div>
 
                 {/* ETHEREUM */}
-                <div className="border border-[#333333] bg-[#0A0A0A] p-8 md:p-12">
+                <div className="border border-[#333333] bg-[#0A0A0A] p-8 md:p-12 mb-8">
                   <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8 border-b border-[#222222] pb-6">
                     <h4 className="font-mono text-[32px] font-bold text-[#FFFFFF]">ETHEREUM</h4>
                     <div className="font-mono text-[24px] font-bold text-[#FF3333] tracking-[0.2em] px-4 py-2 border border-[#FF3333]/30 opacity-70">
@@ -180,6 +180,20 @@ function App() {
                   <div className="font-sans font-light text-[18px] md:text-[20px] text-[#D0D0D0] leading-[1.6]">
                     <span className="text-[#FFFFFF] font-bold block mb-4">Every EOA that ever sent a transaction has an exposed key.</span>
                     Requires a multi-year EIP process. Post-quantum signatures increase calldata 38×, exploding gas costs globally. Every single DeFi contract inevitably requires complete redeployment.
+                  </div>
+                </div>
+
+                {/* SOLANA */}
+                <div className="border border-[#333333] bg-[#0A0A0A] p-8 md:p-12 mb-8">
+                  <div className="flex flex-col md:flex-row justify-between items-start md:items-center gap-6 mb-8 border-b border-[#222222] pb-6">
+                    <h4 className="font-mono text-[32px] font-bold text-[#FFFFFF]">SOLANA</h4>
+                    <div className="font-mono text-[24px] font-bold text-[#FF3333] tracking-[0.2em] px-4 py-2 border border-[#FF3333]/30 opacity-70">
+                      FRAGILE
+                    </div>
+                  </div>
+                  <div className="font-sans font-light text-[18px] md:text-[20px] text-[#D0D0D0] leading-[1.6]">
+                    <span className="text-[#FFFFFF] font-bold block mb-4">High performance relies on small signature sizes.</span>
+                    Solana uses Ed25519 signatures. A forced upgrade to 2,420-byte ML-DSA signatures would expand transaction payloads massively, fundamentally crippling the high-throughput, low-bandwidth value proposition of the network and requiring monumental hardware requirements for validators.
                   </div>
                 </div>
 
@@ -246,7 +260,7 @@ function App() {
             </div>
             <div className="lg:col-span-9 font-sans font-light text-[20px] md:text-[24px] text-[#D0D0D0] leading-[1.6] space-y-12 max-w-[800px]">
               <p>
-                Decred's readiness is not theoretical. In December 2021, the integration of Streamlined NTRU Prime 4591 alongside the classical x25519 key exchange was successfully deployed to the Decred mainnet.
+                Decred's readiness is not theoretical. In December 2021, the integration of Streamlined NTRU Prime 4591 alongside the classical x25519 key exchange was successfully deployed to the Decred mainnet.<sup className="text-[#888888] text-[0.6em] ml-1">[5]</sup>
               </p>
               <p>
                 By actively deploying code rather than relying entirely on multi-year roadmaps, Decred demonstrates the foundational agility required to survive the post-quantum transition. The governance infrastructure that allowed this upgrade to happen seamlessly currently sits waiting to ratify the inevitable signature replacement hard fork.
@@ -265,10 +279,46 @@ function App() {
         </section>
 
         {/* GUT PUNCH CLOSE */}
-        <section className="bg-[#0A0A0A] border-y border-[#222222]">
+        <section className="bg-[#0A0A0A] border-y border-[#222222] border-b-0">
           <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-32 md:py-48 text-center flex items-center justify-center">
             <div className="font-sans font-light text-[32px] md:text-[48px] lg:text-[64px] text-[#FFFFFF] leading-[1.2] max-w-[1200px]">
               The networks that survive <span className="font-bold text-[#FF3333]">Q-Day</span> will be the ones that can vote to save themselves.
+            </div>
+          </div>
+        </section>
+
+        {/* FOOTNOTES / SOURCES */}
+        <section className="bg-[#0A0A0A] border-y border-[#222222] py-16">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-12">
+            <h3 className="font-mono font-bold text-[16px] text-[#666666] tracking-[0.1em] uppercase mb-8">
+              Sources & Citations
+            </h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-8 font-mono text-[12px] text-[#888888] leading-relaxed">
+              <div>
+                <ol className="list-decimal pl-4 space-y-4">
+                  <li>
+                    <strong className="text-[#A0A0A0]">NIST Finalizes PQC Standards (2024):</strong> FIPS 204 published by the National Institute of Standards and Technology officially standardized ML-DSA.
+                    <a href="https://www.nist.gov/news-events/news/2024/08/nist-releases-first-3-finalized-post-quantum-encryption-standards" target="_blank" rel="noopener noreferrer" className="text-[#666666] hover:text-[#FFFFFF] block mt-1 break-all transition-colors">[Link to NIST release]</a>
+                  </li>
+                  <li>
+                    <strong className="text-[#A0A0A0]">ML-DSA vs ECDSA Signature Sizes:</strong> FIPS 204 specifies ML-DSA-44 signatures are 2,420 bytes. Standard ECDSA/Ed25519 signatures are 64 bytes. (2420 / 64 = 37.8x).
+                  </li>
+                  <li>
+                    <strong className="text-[#A0A0A0]">Bitcoin Taproot Timeline (~4 years):</strong> The Taproot upgrade (BIP 341) was formally proposed by Pieter Wuille in January 2018 and activated on the network at block 709,632 in November 2021.
+                  </li>
+                </ol>
+              </div>
+              <div>
+                <ol className="list-decimal pl-4 space-y-4" start={4}>
+                  <li>
+                    <strong className="text-[#A0A0A0]">Exposed Value in Bitcoin:</strong> The "$380B" figure assumes a rough estimate of ~4 million BTC resting in early P2PK/P2PKH addresses with fully exposed public keys (including the ~1.1 million associated with the Satoshi Nakamoto miner entities), calculated at ~$95,000/BTC.
+                  </li>
+                  <li>
+                    <strong className="text-[#A0A0A0]">Decred Post-Quantum Readiness:</strong> In Dec 2021, Decred activated a hybrid post-quantum key exchange (Streamlined NTRU Prime 4591 / x25519) without splitting the network, relying on its binding on-chain governance system.
+                    <a href="https://blog.decred.org/2021/12/28/Decred-Journal-December-2021" target="_blank" rel="noopener noreferrer" className="text-[#666666] hover:text-[#FFFFFF] block mt-1 break-all transition-colors">[Link to Decred Journal]</a>
+                  </li>
+                </ol>
+              </div>
             </div>
           </div>
         </section>
