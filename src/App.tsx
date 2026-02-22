@@ -62,6 +62,9 @@ function App() {
             </div>
             <div className="lg:col-span-7 font-sans font-light text-[20px] md:text-[24px] text-[#D0D0D0] leading-[1.6] space-y-12">
               <p>
+                The threat timeline collapsed in February 2026. With the announcement of Iceberg Quantum's "Pinnacle Architecture," the estimated requirement to break RSA-2048 (and consequently ECC-256) plummeted to fewer than 100,000 physical qubits. The theoretical is now imminent.
+              </p>
+              <p>
                 When a sufficiently powerful quantum computer runs Shor's algorithm against ECDSA, every public key ever exposed on a blockchain becomes a target. This includes every address that has ever sent a transaction — because sending requires revealing the public key.
               </p>
               <p>
@@ -165,7 +168,7 @@ function App() {
                   </div>
                   <div className="font-sans font-light text-[18px] md:text-[20px] text-[#D0D0D0] leading-[1.6]">
                     <span className="text-[#FFFFFF] font-bold block mb-4">~4M BTC in P2PK addresses. Keys permanently exposed.</span>
-                    Requires a social consensus hard fork with no mechanism to reliably force key migration. Satoshi's 1M BTC becomes completely unrecoverable or trivially stolen. The network risks permanent chain splits.
+                    Requires a social consensus hard fork with no mechanism to reliably force key migration. Proposals like BIP-360 or Pay-to-Merkle-Root remain opt-in soft forks, which experts estimate will take 7 to 15 years to achieve 90% wallet adoption. Satoshi's 1M BTC becomes completely unrecoverable or trivially stolen.
                   </div>
                 </div>
 
@@ -179,7 +182,7 @@ function App() {
                   </div>
                   <div className="font-sans font-light text-[18px] md:text-[20px] text-[#D0D0D0] leading-[1.6]">
                     <span className="text-[#FFFFFF] font-bold block mb-4">Every EOA that ever sent a transaction has an exposed key.</span>
-                    Requires a multi-year EIP process. Post-quantum signatures increase calldata 38×, exploding gas costs globally. Every single DeFi contract inevitably requires complete redeployment.
+                    Requires a multi-year EIP process. Even with Account Abstraction (EIP-4337), performing post-quantum signature verification in smart contracts causes a 300% to 500% spike in gas costs. Every single DeFi contract inevitably requires complete redeployment.
                   </div>
                 </div>
 
@@ -278,11 +281,20 @@ function App() {
           </div>
         </section>
 
-        {/* GUT PUNCH CLOSE */}
+        {/* GUT PUNCH CLOSE & CTA */}
         <section className="bg-[#0A0A0A] border-y border-[#222222] border-b-0">
-          <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-32 md:py-48 text-center flex items-center justify-center">
-            <div className="font-sans font-light text-[32px] md:text-[48px] lg:text-[64px] text-[#FFFFFF] leading-[1.2] max-w-[1200px]">
+          <div className="max-w-[1400px] mx-auto px-6 md:px-12 py-24 md:py-32 flex flex-col items-center justify-center text-center">
+            <div className="font-sans font-light text-[32px] md:text-[48px] lg:text-[64px] text-[#FFFFFF] leading-[1.2] max-w-[1200px] mb-16">
               The networks that survive <span className="font-bold text-[#FF3333]">Q-Day</span> will be the ones that can vote to save themselves.
+            </div>
+
+            <div className="flex flex-col sm:flex-row gap-6 font-mono text-[14px] uppercase tracking-widest font-bold">
+              <a href="https://github.com/decred/dcrd" target="_blank" rel="noopener noreferrer" className="px-8 py-4 bg-[#FFFFFF] text-[#000000] hover:bg-[#FF3333] hover:text-[#FFFFFF] transition-colors flex items-center justify-center gap-3">
+                Verify Source Code <ArrowRight size={16} />
+              </a>
+              <a href="https://proposals.decred.org/" target="_blank" rel="noopener noreferrer" className="px-8 py-4 border border-[#333333] text-[#FFFFFF] hover:border-[#FFFFFF] hover:bg-[#111111] transition-colors flex items-center justify-center gap-3">
+                See Governance In Action <ArrowRight size={16} />
+              </a>
             </div>
           </div>
         </section>
